@@ -16,7 +16,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         menuCad = new javax.swing.JMenu();
-        menuCadUsuarios = new javax.swing.JMenuItem();
+        menuCadClientes = new javax.swing.JMenuItem();
         usuario = new javax.swing.JMenuItem();
         menuOpcao = new javax.swing.JMenu();
         menuSair = new javax.swing.JMenuItem();
@@ -45,13 +45,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        menuCadUsuarios.setText("Cliente");
-        menuCadUsuarios.addActionListener(new java.awt.event.ActionListener() {
+        menuCadClientes.setText("Cliente");
+        menuCadClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuCadUsuariosActionPerformed(evt);
+                menuCadClientesActionPerformed(evt);
             }
         });
-        menuCad.add(menuCadUsuarios);
+        menuCad.add(menuCadClientes);
 
         usuario.setText("Usuario");
         usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -119,9 +119,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuCadUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadUsuariosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuCadUsuariosActionPerformed
+    private void menuCadClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadClientesActionPerformed
+        TelaCliente cliente = new TelaCliente();
+        cliente.setVisible(true);
+        desktop.add(cliente);
+    }//GEN-LAST:event_menuCadClientesActionPerformed
 
     private void menuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAjudaActionPerformed
         // TODO add your handling code here:
@@ -188,7 +190,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar menu;
     private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuCad;
-    private javax.swing.JMenuItem menuCadUsuarios;
+    private javax.swing.JMenuItem menuCadClientes;
     private javax.swing.JMenu menuOpcao;
     private javax.swing.JMenuItem menuSair;
     private javax.swing.JMenuItem menuSobre;
